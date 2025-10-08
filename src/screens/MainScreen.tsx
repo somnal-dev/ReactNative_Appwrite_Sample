@@ -4,6 +4,8 @@ import { Note } from '../types/note';
 import NoteList from '../components/NoteList';
 import { client, database } from '../apis/server';
 import { ID } from 'appwrite';
+import { NativeDocumentPicker } from '@react-native-documents/picker/lib/typescript/spec/NativeDocumentPicker';
+import { pick, types } from '@react-native-documents/picker';
 
 const MainScreen = () => {
   const [connectionResult, setConnectionResult] = useState('');
@@ -14,6 +16,9 @@ const MainScreen = () => {
   const [noteId, setNoteId] = useState<string | null>(null);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+
+  const [realTimeText, setRealTimeText] = useState('');
+  const [file, setFile] = useState<File | null>(null);
 
   useEffect(() => {
     ping();
@@ -90,6 +95,15 @@ const MainScreen = () => {
     }
   };
 
+  const handleSelectFile = async () => {
+    try {
+      const result = await pick({
+        allowMultiSelection: false,
+        type: [types.images],
+      });
+    } catch (error) {}
+  };
+
   const handleKakaoLoginClick = () => {};
   const handleNaverLoginClick = () => {};
 
@@ -100,6 +114,8 @@ const MainScreen = () => {
 
       <Text>{connectionResult}</Text>
       <Text>{loadResult}</Text>
+
+      <View style={{ height: 20 }} />
 
       <Text style={styles.noteCount}>노트 갯수 : {noteCount}</Text>
 
@@ -115,6 +131,7 @@ const MainScreen = () => {
         onChangeText={setContent}
         placeholder={'내용'}
       />
+      <Button title={'이미지 선택'} onPress={handleSelectFile} />
 
       <Button title={'확인'} onPress={handleConfirmClick} />
 

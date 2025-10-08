@@ -2111,6 +2111,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-documents/picker@npm:^10.1.7":
+  version: 10.1.7
+  resolution: "@react-native-documents/picker@npm:10.1.7"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/f2578398ec590c7ee5a0fda8f0625e54fa8da3a9c21608a802bf30905ff9a02d2ec94bf0e0625f206bfa0552c19c685de207d2e79868960d0efe39aaffe8c5cf
+  languageName: node
+  linkType: hard
+
 "@react-native/assets-registry@npm:0.81.4":
   version: 0.81.4
   resolution: "@react-native/assets-registry@npm:0.81.4"
@@ -3018,6 +3028,7 @@ __metadata:
     "@react-native-community/cli": "npm:20.0.0"
     "@react-native-community/cli-platform-android": "npm:20.0.0"
     "@react-native-community/cli-platform-ios": "npm:20.0.0"
+    "@react-native-documents/picker": "npm:^10.1.7"
     "@react-native/babel-preset": "npm:0.81.4"
     "@react-native/eslint-config": "npm:0.81.4"
     "@react-native/metro-config": "npm:0.81.4"
@@ -3036,6 +3047,7 @@ __metadata:
     react: "npm:19.1.0"
     react-native: "npm:0.81.4"
     react-native-dotenv: "npm:^3.4.11"
+    react-native-image-picker: "npm:^8.2.1"
     react-native-inappbrowser-reborn: "npm:^3.7.0"
     react-native-safe-area-context: "npm:^5.6.1"
     react-native-screens: "npm:^4.16.0"
@@ -7693,6 +7705,16 @@ __metadata:
   peerDependencies:
     "@babel/runtime": ^7.20.6
   checksum: 10c0/9ed4a37fb59030706d17a1cc49d05af9d8fc57dcb2ef97e122b844f3ab6f6331ebc089afac559fe5bddf37806aa282b4118005f1b27aae5e37fdc3fc8bd7625c
+  languageName: node
+  linkType: hard
+
+"react-native-image-picker@npm:^8.2.1":
+  version: 8.2.1
+  resolution: "react-native-image-picker@npm:8.2.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/82b6c51ece8d16806975aff7675d26280fdd2391c05ca9415620195cc6643ca0db4601d3b24e117d7f5331c2e55ba7c03090d276e55b3b5687a636245428a047
   languageName: node
   linkType: hard
 
